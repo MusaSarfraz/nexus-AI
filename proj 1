@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+file_path = r"C:\Users\ZS\OneDrive\Documents\OnlineRetail.csv"
+
+nexus_model = pd.read_csv(file_path, encoding="ISO-8859-1")
+
+nexus_model.dropna(inplace=True)
+nexus_model.drop_duplicates(inplace=True)
+nexus_model['InvoiceDate'] = pd.to_datetime(nexus_model['InvoiceDate'])
+
+print(nexus_model.isnull().sum())
+print(nexus_model.head())
+print(nexus_model.describe())
+
+plt.hist(nexus_model['Quantity'], bins=20)
+plt.xlabel('Quantity')
+plt.ylabel('Frequency')
+plt.title('Histogram of Quantities')
+plt.show()
+
+nexus_model.groupby('InvoiceDate')['Quantity'].sum().sort_index().plot()
+plt.xlabel('Date')
+plt.ylabel('Total Quantity')
+plt.title('Sales Over Time')
+plt.show()
