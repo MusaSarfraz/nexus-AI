@@ -1,0 +1,20 @@
+# Task4_NEXUSAI
+# Task 4: Optimizing Churn Prediction (Advanced Classification)
+
+## Objective
+Improve churn prediction using advanced models and evaluation metrics.
+
+## Steps
+1. Feature Scaling: Apply StandardScaler to numerical features.  
+2. Model Training: Train Random Forest or XGBoost classifier.  
+3. Advanced Evaluation: Calculate Precision, Recall, and F1-Score.  
+4. Comparison: Compare results with Logistic Regression (Task 3) and justify the better model.  
+
+## Dataset
+Same Telco Customer Churn dataset.  
+
+## Expected Output
+- Advanced model (Random Forest or XGBoost).  
+- Precision, Recall, F1-Score printed.  
+- Comparison table vs Logistic Regression.  
+- Recommendation of which model is better for deployment.  
