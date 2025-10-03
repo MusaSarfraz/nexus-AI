@@ -1,0 +1,28 @@
+# Task 6: Time Series Forecasting
+
+## Description
+This project performs time series forecasting to predict future sales based on historical data using SARIMA.
+
+## Requirements
+- Python 3.8+
+- pandas
+- statsmodels
+- matplotlib
+
+## How to Run
+1. Install dependencies:
+   ```bash
+   pip install pandas statsmodels matplotlib
+   ```
+2. Run the notebook:
+   ```bash
+   jupyter notebook task6_forecasting.ipynb
+   ```
+
+## Features
+- Data preparation and visualization of time series
+- Model building with SARIMA
+- Forecasting future values and plotting results
+
+## Expected Output
+- Forecasted sales values with corresponding visualizations
