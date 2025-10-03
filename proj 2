@@ -1,0 +1,27 @@
+import pandas as pd
+import plotly.express as px
+
+df = pd.read_csv("cleaned_data.csv", parse_dates=['InvoiceDate'])
+
+
+df['Month'] = df['InvoiceDate'].dt.to_period('M').astype(str)
+
+top_products = df.groupby('Description')['Sales'].sum().nlargest(5).reset_index()
+sales_by_country = df.groupby('Country')['Sales'].sum().nlargest(10).reset_index()
+monthly_sales = df.groupby('Month')['Sales'].sum().reset_index()
+
+
+fig1 = px.bar(top_products, x="Description", y="Sales", title="Top 5 Products by Sales")
+fig1.show()
+
+fig2 = px.bar(sales_by_country, x="Country", y="Sales", title="Top 10 Countries by Sales")
+fig2.show()
+
+fig3 = px.line(monthly_sales, x="Month", y="Sales", title="Monthly Sales Trend")
+fig3.show()
+
+
+fig4 = px.line(df, x="InvoiceDate", y="Sales", color="Country", 
+               title="Sales Over Time by Country")
+fig4.update_xaxes(rangeslider_visible=True)
+fig4.show()
