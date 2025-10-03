@@ -1,0 +1,27 @@
+# Task 5: Recommendation System
+
+## Description
+This project builds a recommendation system to suggest products to users based on their past interactions and preferences.
+
+## Requirements
+- Python 3.8+
+- pandas
+- scikit-learn
+
+## How to Run
+1. Install dependencies:
+   ```bash
+   pip install pandas scikit-learn
+   ```
+2. Run the notebook:
+   ```bash
+   jupyter notebook task5_recommendation.ipynb
+   ```
+
+## Features
+- Data preprocessing and cleaning
+- Implementation of collaborative filtering techniques
+- Generation of product recommendations for users
+
+## Expected Output
+- List of recommended products for selected users
