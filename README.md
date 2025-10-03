@@ -1,90 +1,32 @@
-# nexus-AI
-Complete set of projects done for the company NEXUS AI
 
+# Task1_EDA_NEXUSAI
+# Task 1: Exploratory Data Analysis (EDA)
 
-# Nexus AI – Project Portfolio
+## Overview
+Perform exploratory data analysis on the Online Retail dataset. Clean the data, compute statistics, create visualizations, and extract business insights.
 
-This repository contains a collection of projects assigned by **Nexus AI**. Each project focuses on a different aspect of working with data — from cleaning and exploration to visualization and model development.
+## Steps
+1. Load `OnlineRetail.csv`
+2. Clean data:
+   - Remove duplicates
+   - Convert `InvoiceDate` to datetime
+   - Drop rows with missing `CustomerID`
+   - Add `Sales = Quantity × UnitPrice`
+3. Compute descriptive statistics for Quantity, UnitPrice, and Sales
+4. Visualizations:
+   - Histogram of Sales
+   - Bar chart of Top 10 Products by Sales
+   - Line chart of Sales Over Time
+5. Save cleaned dataset as `cleaned_data.csv`
+6. Print 5 key business insights:
+   - Country with highest sales
+   - Peak sales month
+   - Best-selling product
+   - Average order value
+   - Unique customers and transactions
 
-The repository will serve as a central place to document all six projects.
-
----
-
-## Projects Overview
-
-### Project 1: Online Retail Data Analysis
-
-**Objective:**
-Perform exploratory data analysis (EDA) on an online retail dataset.
-
-**Key Steps:**
-
-* Load the dataset (`OnlineRetail.csv`)
-* Handle missing values and duplicates
-* Convert `InvoiceDate` to datetime format
-* Perform basic inspection with null checks, previews, and descriptive statistics
-* Visualize:
-
-  * Histogram of product quantities
-  * Time series of total sales over time
-
-**Technologies Used:**
-
-* Python
-* Pandas
-* Matplotlib
-
-**Output:**
-Initial insights into product demand and sales trends.
-
-[View Project 1 Code](./online-retail/retail_analysis.py)
-
----
-
-### Upcoming Projects
-
-These projects will be added as they are completed.
-
-* Project 2: To be announced
-* Project 3: To be announced
-* Project 4: To be announced
-* Project 5: To be announced
-* Project 6: To be announced
-
----
-
-## Tech Stack
-
-* Python 3
-* Pandas (data manipulation)
-* Matplotlib (visualization)
-* Additional libraries and tools will be added as new projects are introduced
-
----
-
-## How to Run a Project
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/your-username/nexus-ai-projects.git
-   cd nexus-ai-projects
-   ```
-2. Navigate into the project folder (e.g., `online-retail`).
-3. Install dependencies:
-
-   ```bash
-   pip install pandas matplotlib
-   ```
-4. Run the script:
-
-   ```bash
-   python retail_analysis.py
-   ```
-
----
-
-## Acknowledgements
-
-* Nexus AI for providing the projects and datasets
-* Open-source Python libraries including Pandas and Matplotlib
+## Output
+- Cleaned dataset: `cleaned_data.csv`
+- Statistical summaries
+- Visualizations
+- Printed insights
